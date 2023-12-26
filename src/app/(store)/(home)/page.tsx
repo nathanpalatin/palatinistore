@@ -1,25 +1,24 @@
-import { api } from '@/data/api'
-
 import { Product } from '@/components/product'
 
-async function getFeaturedProducts() {
-  const response = await api('/products/featured')
-  const products = await response.json()
-  return products
-}
+import { getFeaturedProducts } from '@/services/products'
+import { ProductProps } from '@/types/product'
 
 export default async function Home() {
-  const productHome = await getFeaturedProducts()
-
-  console.log(productHome)
+  const products: ProductProps[] = await getFeaturedProducts()
 
   return (
-    <main className="flex flex-col items-center">
-      <Product
-        user={'nathanpalatin'}
-        profileImage="https://github.com/nathanpalatin.png"
-        url="https://i.ibb.co/XJSF5b1/lion.jpg"
-      />
+    <main className="flex flex-col lg:flex-row gap-3 items-center">
+      {products.map((product) => (
+        <Product
+          key={product.id}
+          user={'nathanpalatin'}
+          profileImage="https://github.com/nathanpalatin.png"
+          title={product.title}
+          image={product.image}
+          price={product.price}
+          slug={product.slug}
+        />
+      ))}
     </main>
   )
 }
