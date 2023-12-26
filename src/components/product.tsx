@@ -3,7 +3,14 @@ import Link from 'next/link'
 
 import { ProductProps } from '@/types/product'
 
-export function Product({ title, price, slug, image, owner }: ProductProps) {
+export function Product({
+  title,
+  description,
+  price,
+  slug,
+  image,
+  owner,
+}: ProductProps) {
   return (
     <div className="flex justify-center w-full relative rounded-sm bg-zinc-100 mb-1">
       <div className="flex justify-between gap-2 items-center z-20 absolute top-3 left-3">
@@ -37,10 +44,9 @@ export function Product({ title, price, slug, image, owner }: ProductProps) {
           })}
         </h1>
       </div>
-      <div className="absolute bottom-9 left-5 w-full z-10">
-        <h1 className="text-sm text-zinc-50 font-medium">{title}</h1>
+      <div className="absolute bottom-8 left-5 z-10">
+        <h1 className="text-sm text-zinc-50 font-bold">{title}</h1>
       </div>
-      <div className="from-zinc-900 to-transparent bg-gradient-to-b h-10 absolute top-0 w-full z-10" />
     </div>
   )
 }

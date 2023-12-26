@@ -6,7 +6,7 @@ import { getFeaturedProducts } from '@/services/products'
 export default async function Home() {
   const products: ProductProps[] = await getFeaturedProducts()
   return (
-    <main className="flex flex-col lg:flex-row gap-3 items-center">
+    <main className="flex flex-col lg:flex-row gap-5 items-center">
       {products.map((product) => (
         <Product
           key={product.id}
