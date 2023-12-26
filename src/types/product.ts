@@ -1,9 +1,12 @@
+import { User } from './user'
+
 export interface ProductProps {
-  id: number
+  id?: number
   title: string
   slug: string
   price: number
   image: string
-  description: string
-  featured: boolean
+  owner: User
+  description?: string
+  featured?: boolean
 }
