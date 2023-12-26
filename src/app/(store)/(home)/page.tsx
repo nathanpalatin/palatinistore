@@ -1,29 +1,25 @@
-import { Header } from '@/components/header'
+import { api } from '@/data/api'
+
 import { Product } from '@/components/product'
-import { Footer } from '@/components/footer'
 
-export default function Home() {
+async function getFeaturedProducts() {
+  const response = await api('/products/featured')
+  const products = await response.json()
+  return products
+}
+
+export default async function Home() {
+  const productHome = await getFeaturedProducts()
+
+  console.log(productHome)
+
   return (
-    <main className="flex flex-col items-center p-4">
-      <div className="w-[400px]">
-        <Header />
-
-        <div className="h-px w-full bg-zinc-900 my-3" />
-
-        <div className="flex flex-col space-y-3">
-          <Product
-            user={'nathanpalatin'}
-            profileImage="https://github.com/nathanpalatin.png"
-            url="/lion.avif"
-          />
-          <Product
-            user={'nathanpalatin'}
-            profileImage="https://github.com/nathanpalatin.png"
-            url="/lion.avif"
-          />
-        </div>
-        <Footer />
-      </div>
+    <main className="flex flex-col items-center">
+      <Product
+        user={'nathanpalatin'}
+        profileImage="https://github.com/nathanpalatin.png"
+        url="https://i.ibb.co/XJSF5b1/lion.jpg"
+      />
     </main>
   )
 }
