@@ -7,6 +7,6 @@ export interface ProductProps {
   price: number
   image: string
   owner: User
-  description?: string
-  featured?: boolean
+  description: string
+  featured: boolean
 }

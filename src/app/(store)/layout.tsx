@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 
 import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
+import { Toaster } from '@/components/ui/toaster'
 
 export default function StoreLayout({ children }: { children: ReactNode }) {
   return (
@@ -9,6 +10,7 @@ export default function StoreLayout({ children }: { children: ReactNode }) {
       <Header />
       <div className="h-px w-full bg-zinc-800 my-3" />
       {children}
+      <Toaster />
       <Footer />
     </div>
   )
