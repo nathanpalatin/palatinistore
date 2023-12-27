@@ -11,10 +11,9 @@ export function Product({
   slug,
   image,
   owner,
-  featured,
 }: ProductProps) {
   return (
-    <div className="flex justify-center w-full relative rounded-sm bg-zinc-100 mb-1">
+    <div className="flex justify-center w-full relative rounded-sm bg-zinc-900 mb-1">
       <div className="flex justify-between gap-2 items-center z-20 absolute top-3 left-3">
         <Image
           src={owner.profileImage}
@@ -25,7 +24,6 @@ export function Product({
           alt="foto do dono do produto"
         />
         <h1 className="text-sm text-zinc-200 flex-1 ">{owner.name}</h1>
-        {featured && <Star size={15} className="fill-slate-800" />}
       </div>
 
       <Link href={`/product/${slug}`} className="w-full h-full">

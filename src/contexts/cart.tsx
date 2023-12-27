@@ -20,7 +20,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
   function addToCart(productId: number) {
     setCartItems((state) => {
       const productInCart = state.some((item) => item.productId === productId)
-
       if (productInCart) {
         return state.map((item) => {
           if (item.productId === productId) {

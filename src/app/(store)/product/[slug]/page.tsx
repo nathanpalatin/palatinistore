@@ -18,8 +18,8 @@ export default async function Product({ params }: ProductParams) {
         alt="foto do produto"
         priority
         quality={100}
-        width={500}
-        className=" w-full h-full lg:w-[600px] relative object-cover z-0"
+        width={900}
+        className=" w-full h-full lg:w-[900px] relative object-cover z-0"
         height={400}
       />
       <div className="flex flex-col justify-center gap-5">
