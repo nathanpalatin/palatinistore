@@ -10,12 +10,17 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
+import { SearchForm } from './search-form'
+
 export function Header() {
   return (
     <div className="flex justify-between items-center">
-      <Link href="/" className="flex-1 text-zinc-100 font-extrabold">
-        palatinistore
-      </Link>
+      <div className="flex items-center gap-5">
+        <Link href="/" className="flex-1 text-zinc-100 font-extrabold">
+          palatinistore
+        </Link>
+        <SearchForm />
+      </div>
 
       <div className="flex gap-2 items-center">
         <div className=" flex items-center gap-1">

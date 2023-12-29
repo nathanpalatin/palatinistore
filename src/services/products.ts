@@ -20,3 +20,13 @@ export async function getProduct(slug: string): Promise<ProductProps> {
   const product = await response.json()
   return product
 }
+
+export async function searchProducts(query: string): Promise<ProductProps[]> {
+  const response = await api(`/products/search?q=${query}`, {
+    next: {
+      revalidate: 60 * 60,
+    },
+  })
+  const products = await response.json()
+  return products
+}

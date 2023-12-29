@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ProductProps } from '@/types/product'
-import { ShoppingCart, Star } from 'lucide-react'
+import { ShoppingCart } from 'lucide-react'
 
 export function Product({
   title,
