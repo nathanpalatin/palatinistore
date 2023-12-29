@@ -2,11 +2,18 @@
 
 import { ToastAction } from '@/components/ui/toast'
 import { useToast } from '@/components/ui/use-toast'
+import { useCart } from '@/contexts/cart'
 
-export function Button() {
+interface ButtonProductProps {
+  productId: number
+}
+
+export function Button({ productId }: ButtonProductProps) {
   const { toast } = useToast()
+  const { addToCart } = useCart()
 
-  function addToCart() {
+  function handleAddToCart() {
+    addToCart(productId)
     toast({
       variant: 'default',
       title: 'Produto adicionado!',
@@ -16,7 +23,10 @@ export function Button() {
   }
 
   return (
-    <button className="bg-emerald-700 p-2 rounded-full" onClick={addToCart}>
+    <button
+      className="bg-emerald-700 w-[320px] p-2 rounded-full"
+      onClick={handleAddToCart}
+    >
       <h1 className="font-medium">Adicionar ao carrinho</h1>
     </button>
   )

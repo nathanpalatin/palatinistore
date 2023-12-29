@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { LogOut, Settings, ShoppingBag, User } from 'lucide-react'
+import { LogOut, Settings, User } from 'lucide-react'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu'
 
 import { SearchForm } from './search-form'
+import { Cart } from './cart-bag'
 
 export function Header() {
   return (
@@ -23,14 +24,10 @@ export function Header() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <div className=" flex items-center gap-1">
-          <ShoppingBag className="text-zinc-400 w-6 h-6" />
-          <h1 className="text-zinc-600 text-sm">(0)</h1>
-        </div>
+        <Cart />
         <div className="w-px h-5 bg-zinc-800" />
         <DropdownMenu>
           <DropdownMenuTrigger>
-            {' '}
             <Image
               src={'https://github.com/nathanpalatin.png'}
               alt="foto de perfil"

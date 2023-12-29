@@ -1,10 +1,23 @@
+import { Metadata } from 'next'
 import Image from 'next/image'
-import { getProduct } from '@/services/products'
+
 import { Button } from '@/components/button-addtocart'
+
+import { getProduct } from '@/services/products'
 
 interface ProductParams {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: ProductProps): Promise<Metadata> {
+  const product = await getProduct(params.slug)
+
+  return {
+    title: product.title,
   }
 }
 
@@ -19,7 +32,7 @@ export default async function Product({ params }: ProductParams) {
         priority
         quality={100}
         width={900}
-        className=" w-full h-full lg:w-[900px] relative object-cover z-0"
+        className=" w-full h-full lg:w-[1200px] relative object-cover z-0"
         height={400}
       />
       <div className="flex flex-col justify-center gap-5">
@@ -42,7 +55,7 @@ export default async function Product({ params }: ProductParams) {
             GG
           </button>
         </div>
-        <Button />
+        <Button productId={product.id} />
       </div>
     </div>
   )

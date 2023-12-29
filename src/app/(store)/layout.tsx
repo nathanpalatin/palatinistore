@@ -1,7 +1,6 @@
 import { ReactNode } from 'react'
 import { CartProvider } from '@/contexts/cart'
 
-import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Toaster } from '@/components/ui/toaster'
 
@@ -12,7 +11,6 @@ export default function StoreLayout({ children }: { children: ReactNode }) {
         <Header />
         <div className="h-px w-full bg-zinc-800 my-3" />
         {children}
-        <Footer />
         <Toaster />
       </div>
     </CartProvider>
