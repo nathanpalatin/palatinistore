@@ -1,7 +1,7 @@
 import { User } from './user'
 
 export interface ProductProps {
-  id?: number
+  id: number
   title: string
   slug: string
   price: number

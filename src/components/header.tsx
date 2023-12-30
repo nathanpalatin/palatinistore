@@ -38,12 +38,12 @@ export function Header() {
             />
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-zinc-900 text-zinc-50 border-zinc-800">
-            <DropdownMenuLabel className="flex gap-2 items-center">
+            <DropdownMenuItem className="flex gap-2 items-center">
               <User size={12} /> Minha conta
-            </DropdownMenuLabel>
-            <DropdownMenuLabel className="flex gap-2 items-center">
+            </DropdownMenuItem>
+            <DropdownMenuItem className="flex gap-2 items-center">
               <Settings size={12} /> Configurações
-            </DropdownMenuLabel>
+            </DropdownMenuItem>
             <DropdownMenuSeparator className="bg-zinc-800" />
             <DropdownMenuItem className="text-red-600 gap-1">
               <LogOut size={12} /> Sair
