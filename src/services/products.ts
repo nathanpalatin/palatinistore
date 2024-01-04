@@ -1,6 +1,16 @@
 import { api } from '@/data/api'
 import { ProductProps } from '@/types/product'
 
+export async function getProducts(): Promise<ProductProps[]> {
+  const response = await api('/products', {
+    next: {
+      revalidate: 60 * 60,
+    },
+  })
+  const products = await response.json()
+  return products
+}
+
 export async function getFeaturedProducts(): Promise<ProductProps[]> {
   const response = await api('/products/featured', {
     next: {

@@ -14,18 +14,6 @@ export function Product({
 }: ProductProps) {
   return (
     <div className="relative mb-1 flex w-full justify-center rounded-sm bg-zinc-900 ">
-      <div className="absolute left-3 top-3 z-20 flex items-center justify-center gap-2">
-        <Image
-          src={owner.profileImage}
-          quality={100}
-          width={20}
-          className="h-7 w-7 rounded-full"
-          height={20}
-          alt="foto do dono do produto"
-        />
-        <h1 className="text-sm text-zinc-300">{owner.name}</h1>
-      </div>
-
       <Link href={`/product/${slug}`} className="h-full w-full">
         <Image
           src={image}
@@ -37,8 +25,8 @@ export function Product({
           height={400}
         />
       </Link>
-      <div className="absolute bottom-0 h-20 w-full bg-zinc-800/50 backdrop-blur-lg">
-        <div className="absolute bottom-5 right-5 z-20 flex items-center gap-2 ">
+      <div className="absolute bottom-0 h-20 w-full bg-zinc-700/20 backdrop-blur-sm">
+        <div className="absolute bottom-5 right-5 z-20 flex items-center gap-2">
           <ShoppingCart
             className="rounded-sm bg-violet-100 p-2 text-zinc-950"
             size={43}
