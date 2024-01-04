@@ -9,8 +9,8 @@ export function Cart() {
 
   return (
     <div className=" flex items-center gap-1">
-      <ShoppingBag className="text-zinc-400 w-6 h-6" />
-      <h1 className="text-zinc-600 text-sm">({items.length})</h1>
+      <ShoppingBag className="h-6 w-6 text-zinc-400" />
+      <h1 className="text-sm text-zinc-600">({items.length})</h1>
     </div>
   )
 }

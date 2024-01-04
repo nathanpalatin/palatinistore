@@ -43,16 +43,16 @@ export default async function Search({ searchParams }: SearchProps) {
                   priority
                   quality={100}
                   width={500}
-                  className=" w-full h-full relative object-cover z-0"
+                  className=" relative z-0 h-full w-full object-cover"
                   height={400}
                 />
               </Link>
 
-              <div className="absolute bottom-6 bg-zinc-100 left-5 z-10 lg:w-[300px] w-[210px]">
-                <h1 className="text-sm text-zinc-50 font-bold truncate">
+              <div className="absolute bottom-6 left-5 z-10 w-[210px] bg-zinc-100 lg:w-[300px]">
+                <h1 className="truncate text-sm font-bold text-zinc-50">
                   {products.title}
                 </h1>
-                <h1 className="text-xs text-zinc-200 font-normal truncate">
+                <h1 className="truncate text-xs font-normal text-zinc-200">
                   {products.description}
                 </h1>
               </div>

@@ -24,7 +24,7 @@ export function Button({ productId }: ButtonProductProps) {
 
   return (
     <button
-      className="bg-emerald-700 w-[320px] p-2 rounded-full"
+      className="w-[320px] rounded-full bg-emerald-700 p-2"
       onClick={handleAddToCart}
     >
       <h1 className="font-medium">Adicionar ao carrinho</h1>

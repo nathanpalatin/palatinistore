@@ -5,47 +5,47 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+
 import { SearchForm } from './search-form'
 import { Cart } from './cart-bag'
+import { Skeleton } from './ui/skeleton'
 
 export function Header() {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex items-center justify-between">
       <div className="flex items-center gap-5">
-        <Link href="/" className="flex-1 text-zinc-100 font-extrabold">
+        <Link href="/" className="flex-1 font-extrabold text-zinc-100">
           palatinistore
         </Link>
         <SearchForm />
       </div>
 
-      <div className="flex gap-2 items-center">
+      <div className="flex items-center gap-2">
         <Cart />
-        <div className="w-px h-5 bg-zinc-800" />
+        <div className="h-5 w-px bg-zinc-800" />
         <DropdownMenu>
           <DropdownMenuTrigger>
-            <Image
-              src={'https://github.com/nathanpalatin.png'}
-              alt="foto de perfil"
-              className="rounded-full"
-              width={26}
-              quality={100}
-              height={26}
-            />
+            <Avatar className="h-7 w-7">
+              <AvatarImage src="https://github.com/nathanpalatin.png" />
+              <AvatarFallback className="bg-zinc-950">
+                <Skeleton className="h-full w-full bg-zinc-800" />
+              </AvatarFallback>
+            </Avatar>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="bg-zinc-900 text-zinc-50 border-zinc-800">
-            <DropdownMenuItem className="flex gap-2 items-center">
+          <DropdownMenuContent className="border-zinc-800 bg-zinc-900 text-zinc-50">
+            <DropdownMenuItem className="flex items-center gap-2">
               <User size={12} /> Minha conta
             </DropdownMenuItem>
-            <DropdownMenuItem className="flex gap-2 items-center">
+            <DropdownMenuItem className="flex items-center gap-2">
               <Settings size={12} /> Configurações
             </DropdownMenuItem>
             <DropdownMenuSeparator className="bg-zinc-800" />
-            <DropdownMenuItem className="text-red-600 gap-1">
+            <DropdownMenuItem className="gap-1 text-red-600">
               <LogOut size={12} /> Sair
             </DropdownMenuItem>
           </DropdownMenuContent>

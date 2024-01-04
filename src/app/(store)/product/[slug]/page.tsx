@@ -25,33 +25,33 @@ export default async function Product({ params }: ProductParams) {
   const product = await getProduct(params.slug)
 
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6">
+    <div className="flex flex-col gap-6 lg:grid lg:grid-cols-2">
       <Image
         src={product.image}
         alt="foto do produto"
         priority
         quality={100}
         width={900}
-        className=" w-full h-full lg:w-[1200px] relative object-cover z-0"
+        className=" relative z-0 h-full w-full object-cover lg:w-[1200px]"
         height={400}
       />
       <div className="flex flex-col justify-center gap-5">
-        <h1 className="text-xl lg:text-3xl font-extrabold">{product.title}</h1>
-        <h1 className="text-sm lg:text-xl text-zinc-400 font-normal">
+        <h1 className="text-xl font-extrabold lg:text-3xl">{product.title}</h1>
+        <h1 className="text-sm font-normal text-zinc-400 lg:text-xl">
           {product.description}
         </h1>
         <h1 className="text-md text-zinc-400">Tamanhos:</h1>
-        <div className="flex gap-2 items-center">
-          <button className="bg-violet-500 ring-1 ring-zinc-200 self-center w-10 p-2 rounded-full">
+        <div className="flex items-center gap-2">
+          <button className="w-10 self-center rounded-full bg-violet-500 p-2 ring-1 ring-zinc-200">
             P
           </button>
-          <button className="bg-transparent w-4 px-5 py-2 rounded-full">
+          <button className="w-4 rounded-full bg-transparent px-5 py-2">
             M
           </button>
-          <button className="bg-transparent w-4 px-5 py-2 rounded-full">
+          <button className="w-4 rounded-full bg-transparent px-5 py-2">
             G
           </button>
-          <button className="bg-transparent w-4 px-5 py-2 rounded-full">
+          <button className="w-4 rounded-full bg-transparent px-5 py-2">
             GG
           </button>
         </div>
