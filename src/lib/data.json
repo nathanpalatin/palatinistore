@@ -65,5 +65,15 @@
        "description": "Moletom fabricado com 88% de algodão e 12% de poliéster.",
        "featured": false
      }
+   ],
+   "users": [
+      {
+        "login": "nathanpalatin",
+        "password": "2024Mudar@",
+        "name": "Nathan Palatin",
+        "email": "nath.palatin@gmail.com",
+        "gender": "masculino",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+      }
    ]
  }
