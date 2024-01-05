@@ -44,11 +44,8 @@ export function FormLogin() {
           </div>
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Link href="/" className="text-sm font-normal text-zinc-500">
-          Voltar
-        </Link>
-        <Button variant="default" type="submit" size="sm">
+      <CardFooter>
+        <Button variant="secondary" type="submit" size="sm" className='w-full text-sm'>
           Entrar
         </Button>
       </CardFooter>

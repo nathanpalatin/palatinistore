@@ -5,16 +5,17 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
+  CardTitle,
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import Link from 'next/link'
 
 export default function SignUp() {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <h1 className="pb-4 text-center text-2xl font-semibold">palatinistore</h1>
-      <Card className="w-[350px] border-zinc-800 bg-zinc-900 text-zinc-50">
+    <div className="flex flex-col items-center justify-around">
+      <Card className="w-[350px]  border-zinc-800 bg-zinc-900 text-zinc-50">
         <CardHeader>
+          <CardTitle><h1 className="pb-4 text-center text-2xl font-semibold">palatinistore</h1></CardTitle>
           <CardDescription className="text-zinc-500">
             Para ter acesso a sua conta, por favor, faça seu login ou
             cadastre-se.
@@ -80,7 +81,7 @@ export default function SignUp() {
           </Link>
         </div>
       </Card>
-      <div className="my-5 flex gap-3">
+      <div className="my-5 flex flex-col gap-3">
         <div className="flex items-center justify-center gap-4">
           <Link href="/" className="text-sm text-zinc-600">
             Cookies
@@ -96,7 +97,7 @@ export default function SignUp() {
           </Link>
         </div>
         <h1 className="text-center text-sm text-zinc-700">
-          © 2024 Todos os direitos reservados.
+          &copy; 2024 - Todos os direitos reservados.
         </h1>
       </div>
     </div>

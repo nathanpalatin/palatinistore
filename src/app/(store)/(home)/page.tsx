@@ -24,7 +24,7 @@ export default async function Home() {
           />
         ))}
       </div>
-      <div className="h-px w-full bg-zinc-800" />
+      <div className="h-px w-full dark:bg-zinc-800 bg-zinc-300" />
       <div className="flex w-full items-center justify-end">
         <Link href={'/products'} className="text-zinc-500 text-sm">Ver todos</Link>
       </div>
