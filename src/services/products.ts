@@ -7,8 +7,8 @@ export async function getProducts(): Promise<ProductProps[]> {
       revalidate: 60 * 60,
     },
   })
-  const products = await response.json()
-  return products
+  const allProducts = await response.json()
+  return allProducts
 }
 
 export async function getFeaturedProducts(): Promise<ProductProps[]> {

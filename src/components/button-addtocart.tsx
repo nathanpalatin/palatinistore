@@ -16,7 +16,7 @@ export function Button({ productId }: ButtonProductProps) {
     addToCart(productId)
     toast({
       variant: 'default',
-      title: 'Produto adicionado!',
+      title: 'Produto adicionado.',
       description: 'Seu carrinho foi atualizado com esse produto.',
       action: <ToastAction altText="Desfazer">Desfazer</ToastAction>,
     })
